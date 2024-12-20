@@ -1,6 +1,6 @@
 # Recipe_manager
 
-his Recipe Manager project is designed to help users manage their cooking ingredients and fetch recipe suggestions based on the available ingredients.
+This Recipe Manager project is designed to help users manage their cooking ingredients and fetch recipe suggestions based on the available ingredients.
 
 Features:
 Add Ingredients:
