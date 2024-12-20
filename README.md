@@ -43,6 +43,3 @@ Main Interface:
 Ingredients Modal:
 
 Recipes Suggestions:
-
-Contributing:
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to create a pull request.
