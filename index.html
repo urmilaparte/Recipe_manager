@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mobileContainer">
+        <h1>Recipe Manager</h1>
+        
+        <div id="statusMessage"></div>
+        
+        <div id="inputSection">
+            <input type="text" id="ingredientInput" placeholder="Enter an ingredient">
+            <button id="addIngredient">Add Ingredient</button>
+            <button id="viewIngredients">View </button> <!-- New Button -->
+        </div>
+        
+        <h2>Your Ingredients</h2>
+        <ul id="ingredientsList"></ul>
+        
+        <button id="getRecipes">Get Recipes</button>
+        <h2>Suggested Recipes</h2>
+        <ul id="recipesList"></ul>
+    </div>
+
+    <!-- Modal to display ingredients -->
+    <div id="ingredientsModal" class="hidden">
+        <div id="modalContent">
+            <h2>Your Ingredients</h2>
+            <ul id="modalIngredientsList"></ul>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
