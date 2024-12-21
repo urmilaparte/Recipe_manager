@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get page elements
     const ingredientInput = document.getElementById('ingredientInput');
     const addIngredientButton = document.getElementById('addIngredient');
     const viewIngredientsButton = document.getElementById('viewIngredients');
@@ -13,25 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const apiKey = '539e9dce746548d4ae9ab93d7e065c56';
 
-    // Show messages in the status bar
+    
     function showMessage(message, color) {
         statusMessage.textContent = message;
         statusMessage.style.color = color;
     }
-
-    // Save ingredients to localStorage
     function saveIngredientsToStorage() {
         const ingredients = Array.from(ingredientsList.children).map(item => item.querySelector('span').textContent);
         localStorage.setItem('ingredients', JSON.stringify(ingredients));
     }
 
-    // Load ingredients from localStorage
+    
     function loadIngredientsFromStorage() {
         const ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
         ingredients.forEach(addIngredient);
     }
 
-    // Add  Edit and Delete buttons
+    
     function addIngredient(ingredient) {
         const item = document.createElement('li');
         item.innerHTML = `
@@ -39,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="edit">Edit</button>
             <button class="delete">Delete</button>`;
         
-        // Edit ingredient
+        
         item.querySelector('.edit').addEventListener('click', () => {
             const newIngredient = prompt('Edit ingredient:', ingredient);
             if (newIngredient) {
@@ -49,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Delete ingredient
+        
         item.querySelector('.delete').addEventListener('click', () => {
             item.remove();
             saveIngredientsToStorage();
@@ -60,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         saveIngredientsToStorage();
     }
 
-    // Add  button click
+    
     addIngredientButton.addEventListener('click', () => {
         const ingredient = ingredientInput.value.trim();
         if (ingredient) {
@@ -72,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // View 
+
     viewIngredientsButton.addEventListener('click', () => {
         modalIngredientsList.innerHTML = '';
         const ingredients = JSON.parse(localStorage.getItem('ingredients')) || [];
@@ -91,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ingredientsModal.classList.remove('hidden'); 
     });
 
-    // Close
+    
     closeModalButton.addEventListener('click', () => {
         ingredientsModal.classList.add('hidden'); 
     });
 
-    // Get recipes 
+    
     getRecipesButton.addEventListener('click', () => {
         recipesList.innerHTML = '';
         const ingredients = Array.from(ingredientsList.children).map(item => item.querySelector('span').textContent);
