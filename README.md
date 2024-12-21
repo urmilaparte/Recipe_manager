@@ -40,6 +40,8 @@ Edit or delete ingredients as needed using the respective buttons.
 Screenshots:
 Main Interface:
 
+Deployement link:- https://vercel.com/urmila-partes-projects/recipe-manager/deployments 
+
 Ingredients Modal:
 
 Recipes Suggestions:
