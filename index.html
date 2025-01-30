@@ -3,35 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Manager</title>
+    <title>Recipe Wonderland</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mobileContainer">
-        <h1>Recipe Manager</h1>
-        
-        <div id="statusMessage"></div>
-        
-        <div id="inputSection">
-            <input type="text" id="ingredientInput" placeholder="Enter an ingredient">
-            <button id="addIngredient">Add Ingredient</button>
-            <button id="viewIngredients">View </button> <!-- New Button -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Foodie</a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" id="homenav">Recipe</a></li>
+                    <li><a href="# "id="viewSavedMagic">Check Saved</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <h2>Your Ingredients</h2>
-        <ul id="ingredientsList"></ul>
-        
-        <button id="getRecipes">Get Recipes</button>
-        <h2>Suggested Recipes</h2>
-        <ul id="recipesList"></ul>
+    </header>
+
+    <div class="slider-container">
+        <h4>What do  I eat</h4>
     </div>
 
-    <div id="ingredientsModal" class="hidden">
-        <div id="modalContent">
-            <h2>Your Ingredients</h2>
-            <ul id="modalIngredientsList"></ul>
-            <button id="closeModal">Close</button>
+    <div class="shayari-container">
+      <p class="shayari">
+          Every flavor tells a story, every spice holds a tale,  
+          Cook what you desire, let your kitchen set sail!  
+          Be it the warmth of fresh-baked bread or the sweetness of firni,  
+          Search, create, and become your own culinary journey!
+      </p>
+  </div>
+
+    <div id="magicKitchen"  style="display: none;" >
+        <h1>Recipe Wonderland</h1>
+        <div id="moodMessage"></div>
+        <div id="ingredientMagic">
+            <div id="ingredientSection">
+                <input type="text" id="ingredientBox" placeholder="Type your ingredient">
+                <button id="addToMagicBox">Add</button>
+            </div>
+            <button id="fetchRecipes">Get Recipes</button>
         </div>
+
+        <h2>Your Magic Ingredients</h2>
+        <ul id="ingredientsList"></ul>
+        <h2>Magical Recipes</h2>
+        <div id="recipeGallery" class="recipe-gallery"></div>
+        <div id="recipeModal" class="popup">
+            <button class="popup-close" id="closePopup">X</button>
+            <h2 id="popupTitle"></h2>
+            <p id="recipeDetails"></p>
+            <ul id="popupIngredients"></ul>
+            <p id="popupInstructions"></p>
+            <button id="saveRecipeButton">Save</button>
+        </div>
+        <div id="savedRecipesContainer" class="popup" style="display: none;">
+            <button class="popup-close" id="closeSavedPopup">X</button>
+            <h2>Saved Magical Recipes</h2>
+            <ul id="savedRecipesList"></ul>
+        </div>
+    </div>
+
+    <div class="recipe-cards-box">
+        <div class="recipe-cards" style="--pos:1">
+            <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_640.jpg" alt="Card Image" />
+            <h2 class="recipe-card-title">Burger</h2>
+        </div>
+        <div class="recipe-cards" style="--pos:2">
+            <img src="https://w0.peakpx.com/wallpaper/939/442/HD-wallpaper-food-pizza.jpg" alt="Card Image" />
+            <h2 class="recipe-card-title">Pizza</h2>
+        </div>
+        <div class="recipe-cards" style="--pos:3">
+            <img src="https://www.ohmyveg.co.uk/wp-content/uploads/2023/07/Idli-1-scaled-e1722868852202-720x540.jpg" alt="Card Image" />
+            <h2 class="recipe-card-title">Idli</h2>
+        </div>
+        <div class="recipe-cards" style="--pos:4">
+          <img src="https://images.pexels.com/photos/13063313/pexels-photo-13063313.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Card Image " />
+          <h2 class="recipe-card-title">Pani Puri</h2>
+      </div> <div class="recipe-cards" style="--pos:5">
+        <img src="https://www.cookrepublic.com/wp-content/uploads/2024/02/corn-chaat-masala.jpg" alt="Card Image " />
+        <h2 class="recipe-card-title">Chaat</h2>
+    </div> <div class="recipe-cards" style="--pos:6">
+      <img src="https://png.pngtree.com/thumb_back/fh260/background/20230613/pngtree-picture-of-dosa-on-a-wooden-plate-image_2892703.jpg" alt="Card Image " />
+      <h2 class="recipe-card-title">Dosa</h2>
     </div>
 
     <script src="script.js"></script>
